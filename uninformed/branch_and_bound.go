@@ -3,9 +3,9 @@ package search
 import (
 	"math"
 
+	"fmt"
 	"github.com/christat/gost/stack"
 	"github.com/christat/search"
-	"fmt"
 )
 
 func upperBoundBnB(domain search.Domain, origin, target interface{}, bound float64) (path map[interface{}]interface{}, found bool) {

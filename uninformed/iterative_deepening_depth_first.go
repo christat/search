@@ -1,9 +1,9 @@
 package search
 
 import (
-"github.com/christat/gost/stack"
-"github.com/christat/search"
 	"fmt"
+	"github.com/christat/gost/stack"
+	"github.com/christat/search"
 )
 
 func IterativeDeepeningDepthFirst(domain search.Domain, origin, target interface{}, depth int) (path map[interface{}]interface{}, found bool) {

@@ -1,9 +1,9 @@
 package search
 
 import (
+	"fmt"
 	"github.com/christat/gost/queue"
 	"github.com/christat/search"
-	"fmt"
 )
 
 func GreedyBestFirst(domain search.Domain, origin, target interface{}) (path map[interface{}]interface{}, found bool) {

@@ -1,9 +1,9 @@
 package search
 
 import (
+	"fmt"
 	"github.com/christat/gost/queue"
 	"github.com/christat/search"
-	"fmt"
 )
 
 // Djikstra performs heuristic search over Domains with arbitrary costs.
