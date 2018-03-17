@@ -7,7 +7,7 @@ package search
 	constant (as they won't be used anyways).
 */
 type Domain interface {
-	Neighbors(node interface{}) ([]interface{}, error) // decision point #1: adjacency list vs adjacency matrix
-	G(node interface{}) (float64, error)
+	Neighbors(node interface{}) ([]interface{}, error)
+	G(origin, target interface{}) (float64, error)
 	H(node interface{}) (float64, error)
 }
