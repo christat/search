@@ -1,31 +1,25 @@
 package search
 
 import (
-	"fmt"
-	"github.com/christat/gost/stack"
 	"github.com/christat/search"
 )
 
-func IterativeDeepeningDepthFirst(domain search.Domain, origin, target interface{}, depth int) (path map[interface{}]interface{}, found bool) {
-	currentDepth := 0
-	open := new(gost.Stack)
+func IterativeDeepening(origin, target search.State, maxDepth int, useNodeStack ...bool) (path map[interface{}]interface{}, found bool) {
+	open := selectStackImplementation(useNodeStack...)
 	open.Push(origin)
 
+	/*currentDepth := 0
 	for open.Size() > 0 {
-		vertex := open.Pop()
+		vertex := open.Pop().(search.State)
 		currentDepth++ //TODO should depth be increased and fn recalled?
-		if currentDepth > depth {
+		if currentDepth > maxDepth {
 			return nil, false
 		}
 		if vertex == target {
 			found = true
 			break
 		}
-		neighbors, err := domain.Neighbors(vertex)
-		if err != nil {
-			fmt.Print(err)
-			return nil, false
-		}
+		neighbors := vertex.Neighbors()
 		for neighbor := range neighbors {
 			_, visited := path[neighbor]
 			if !visited {
@@ -33,6 +27,10 @@ func IterativeDeepeningDepthFirst(domain search.Domain, origin, target interface
 				path[neighbor] = vertex
 			}
 		}
-	}
+	}*/
 	return path, found
 }
+
+/*func DepthLimitedSearch(origin, target search.State, limit int) (state search.State) {
+
+}*/
