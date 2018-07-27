@@ -10,14 +10,12 @@ func TraceSolutionPath(origin, target State, path map[State]State) (tracedPath S
 	ancestor := target
 	tracedPath = append(tracedPath, ancestor.Name())
 	for !ancestor.Equals(origin) {
-		// Go shadows var 'ancestor' if we access map assigning with := so we need to define var 'ok' separately
-		// https://github.com/ashleymcnamara/gophers/blob/master/Facepalm_Picard_Gopher.png
-		var ok bool
-		ancestor, ok = path[ancestor]
+		newAncestor, ok := path[ancestor]
 		if !ok {
 			return tracedPath, fmt.Errorf("ancestor %v not found in solution path", ancestor.Name())
 		}
-		tracedPath = append(tracedPath, ancestor.Name())
+		tracedPath = append(tracedPath, newAncestor.Name())
+		ancestor = newAncestor
 	}
 	return reverse(tracedPath), nil
 }
