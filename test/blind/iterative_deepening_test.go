@@ -5,7 +5,6 @@ import (
 	"github.com/christat/dot"
 	"github.com/christat/search/blind"
 	tracer "github.com/christat/search"
-	"fmt"
 )
 
 func TestIterativeDeepening(t *testing.T) {
@@ -27,7 +26,9 @@ func TestIterativeDeepening(t *testing.T) {
 	if !found {
 		t.Errorf("Failed to find valid path in Benchmark_IDS test file")
 	}
-	fmt.Print(bench)
+	if bench.TotalExpansions != 7 {
+		t.Errorf("Failed to compute node expansions for Benchmark_IDS")
+	}
 
 	res, _ := tracer.TraceSolutionPath(origin, target, path)
 	benchRes, _ := tracer.TraceSolutionPath(origin, target, benchPath)
@@ -47,10 +48,39 @@ func TestIterativeDeepening(t *testing.T) {
 		t.Errorf("Found path with not enough depth assigned")
 	}
 
-	path, found = search.IterativeDeepening(someVertex, bidirectionalAccessVertex, 4)
+	path, found, bench = search.BenchmarkIterativeDeepening(someVertex, bidirectionalAccessVertex, 4)
 	res, _ = tracer.TraceSolutionPath(someVertex, bidirectionalAccessVertex, path)
 	if !found || res.String() != "3 -> 6 -> 10 -> 5" {
 		t.Errorf("Failed to find cyclic path to target")
+	}
+}
+
+func TestBenchmarkIterations(t *testing.T) {
+	ok, graph := dot.ParseFile("../test_dot_files/ids_test.dot", false)
+	if !ok {
+		t.Errorf("Failed to parse DFS test file")
+	}
+	vertexMap := graph.VertexMap()
+	origin := vertexMap["1"]
+	target := vertexMap["6"]
+	leafTarget := vertexMap["9"]
+
+	_, found, bench := search.BenchmarkIterativeDeepening(origin, target, 10)
+	if !found {
+		t.Errorf("Failed to find valid path in Benchmark_IDS test file")
+	}
+	var expectedExpansions uint = 10
+	if bench.TotalExpansions != expectedExpansions {
+		t.Errorf("Failed to correctly count expansions in Benchmark_IDS test file.\nExpected: %v\nFound: %v", expectedExpansions, bench.TotalExpansions)
+	}
+
+	_, found, bench = search.BenchmarkIterativeDeepening(origin, leafTarget, 10)
+	if !found {
+		t.Errorf("Failed to find valid path in Benchmark_IDS test file")
+	}
+	expectedExpansions = 19
+	if bench.TotalExpansions != expectedExpansions {
+		t.Errorf("Failed to correctly count expansions in Benchmark_IDS test file.\nExpected: %v\nFound: %v", expectedExpansions, bench.TotalExpansions)
 	}
 }
 

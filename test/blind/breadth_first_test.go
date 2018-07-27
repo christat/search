@@ -5,7 +5,6 @@ import (
 	"github.com/christat/dot"
 	"github.com/christat/search/blind"
 	tracer "github.com/christat/search"
-	"fmt"
 )
 
 func TestBreadthFirst(t *testing.T) {
@@ -26,8 +25,9 @@ func TestBreadthFirst(t *testing.T) {
 	if !found {
 		t.Errorf("Failed to find valid path in BFS test file")
 	}
-
-	fmt.Print(bench)
+	if bench.TotalExpansions != 10 {
+		t.Errorf("Failed to compute node expansions for Benchmark_BFS")
+	}
 
 	res, _ := tracer.TraceSolutionPath(origin, target, path)
 	benchRes, _ := tracer.TraceSolutionPath(origin, target, benchPath)

@@ -49,14 +49,14 @@ func BenchmarkIterativeDeepening(origin, target search.State, maxDepth int) (pat
 }
 
 func BenchmarkDepthBoundSearch(vertex, target search.State, bound int, path map[search.State]search.State, expansions uint) (map[search.State]search.State, bool, uint) {
+	expansions++
 	var found bool
 	if vertex.Equals(target) {
 		return path, true, expansions
 	} else if bound > 0 {
 		for _, neighbor := range vertex.Neighbors() {
 			path[neighbor] = vertex
-			expansions++
-			path, found = DepthBoundSearch(neighbor, target, bound - 1, path)
+			path, found, expansions = BenchmarkDepthBoundSearch(neighbor, target, bound - 1, path, expansions)
 			if found {
 				break
 			}
