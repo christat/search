@@ -1,4 +1,4 @@
-graph uniformCostTest {
+graph weightedCyclicGraphTest {
 
       // The graph specified is:
       //

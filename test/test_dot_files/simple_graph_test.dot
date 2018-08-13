@@ -1,4 +1,4 @@
-digraph uniformCostTest {
+digraph simpleGraphTest {
 
       // The graph specified is:
       //

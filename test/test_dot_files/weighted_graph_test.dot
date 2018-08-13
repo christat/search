@@ -1,4 +1,4 @@
-digraph uniformCostTest {
+digraph weightedGraphTest {
 
       //          (q1) -----  20
       //       2 /   \ 5   \

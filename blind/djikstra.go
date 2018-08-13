@@ -69,8 +69,7 @@ func enqueueUnvisitedLowerCostNeighbors(vertex, target search.WeightedState, que
 			continue
 		}
 		cumulativeVertexCost := cumulativeCost[vertex]
-		adjacencyCost := vertex.Cost(neighbor)
-		cost := cumulativeVertexCost + adjacencyCost
+		cost := cumulativeVertexCost + vertex.Cost(neighbor)
 		lowestCost, valueSet := cumulativeCost[neighbor]
 		if !valueSet || cost < lowestCost {
 			cumulativeCost[neighbor] = cost

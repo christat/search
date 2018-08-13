@@ -1,0 +1,31 @@
+digraph heuristicCostTest {
+
+      // The graph specified is:
+      //
+      //        b -- c
+      //       /  \   \
+      //      a    \   f
+      //       \    \ /
+      //        d----e
+      //
+      // The graph edges are directional to the right
+      // Note some vertex connection definitions are missing;
+      // Those are added implicitly by the parser.
+      //
+      // Weights are set as attribute "w" in the connection params.
+      // Heuristics are set as attribute "h" in the params.
+      // Optimal A* path is a -> b -> e -> f
+      // Optimal GBFS path is ?????????
+
+      a -> [w=1] b;
+      a -> [w=2] d;
+
+      b [h=7] -> [w=5] c;
+      b -> [w=6] e;
+
+      d [h=5] -> [w=7] e;
+
+      c [h=2] -> [w=4] f;
+      e [h=2] -> [w=2] f;
+}
+
