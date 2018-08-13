@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e541a068-ed98-430c-a1a5-fbb19698b97e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/blind/djikstra.go" beforeDir="false" afterPath="$PROJECT_DIR$/blind/djikstra.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/informed/a_star.go" beforeDir="false" afterPath="$PROJECT_DIR$/informed/a_star.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/informed/greedy_best_first.go" beforeDir="false" afterPath="$PROJECT_DIR$/informed/greedy_best_first.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/informed/greedy_best_first_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/informed/greedy_best_first_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,29 +22,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="djikstra.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blind/djikstra.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+              <folding>
+                <element signature="e#16#98#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="greedy_best_first.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/informed/greedy_best_first.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="195">
+              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+              <folding>
+                <element signature="e#16#98#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="greedy_best_first_test.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/informed/greedy_best_first_test.go">
+      <file leaf-file-name="best_first_helper.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/best_first_helper.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+            <state relative-caret-position="375">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="e#190#269#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="romania_manhattan_heuristic.dot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_dot_files/romania_manhattan_heuristic.dot">
+      <file leaf-file-name="beam.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/informed/beam.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -51,26 +70,26 @@
       <file leaf-file-name="a_star.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/informed/a_star.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="32" lean-forward="true" selection-end-line="85" selection-end-column="1" />
+            <state relative-caret-position="240">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="djikstra.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blind/djikstra.go">
+      <file leaf-file-name="a_star_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/informed/a_star_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1005">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="180">
+              <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heuristic_graph_test.dot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_dot_files/heuristic_graph_test.dot">
+      <file leaf-file-name="djikstra_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/blind/djikstra_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+            <state relative-caret-position="-51">
+              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -93,10 +112,11 @@
       <find>bool,</find>
       <find>print</find>
       <find>InversePriorityQueue</find>
-      <find />
+      <find>failed to find origin</find>
       <find>WeightedState</find>
       <find>Djikstra</find>
       <find>urziceni</find>
+      <find>search.</find>
     </findStrings>
     <replaceStrings>
       <replace>search.Domain</replace>
@@ -114,9 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/informed/hill_climbing_test.go" />
-        <option value="$PROJECT_DIR$/test/informed/iterative_deepening_a_star_test.go" />
-        <option value="$PROJECT_DIR$/uninformed/branch_and_bound.go" />
         <option value="$PROJECT_DIR$/types.go" />
         <option value="$PROJECT_DIR$/uninformed/breadth_first.go" />
         <option value="$PROJECT_DIR$/test/files/breadth_first_test.dot" />
@@ -160,11 +177,14 @@
         <option value="$PROJECT_DIR$/test/test_dot_files/weighted_graph_test.dot" />
         <option value="$PROJECT_DIR$/test/test_dot_files/heuristic_graph_test.dot" />
         <option value="$PROJECT_DIR$/test/informed/a_star_test.go" />
+        <option value="$PROJECT_DIR$/test/test_dot_files/romania_manhattan_distance_heuristic.dot" />
+        <option value="$PROJECT_DIR$/test/informed/greedy_best_first_test.go" />
+        <option value="$PROJECT_DIR$/informed/best_first.go" />
+        <option value="$PROJECT_DIR$/informed/best_first_helper.go" />
         <option value="$PROJECT_DIR$/blind/djikstra.go" />
         <option value="$PROJECT_DIR$/informed/a_star.go" />
         <option value="$PROJECT_DIR$/informed/greedy_best_first.go" />
-        <option value="$PROJECT_DIR$/test/test_dot_files/romania_manhattan_distance_heuristic.dot" />
-        <option value="$PROJECT_DIR$/test/informed/greedy_best_first_test.go" />
+        <option value="$PROJECT_DIR$/best_first_helper.go" />
       </list>
     </option>
   </component>
@@ -181,7 +201,7 @@
     <option name="x" value="1280" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="1010" />
+    <option name="height" value="1009" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -225,12 +245,6 @@
             </path>
             <path>
               <item name="search" type="b2602c69:ProjectViewProjectNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="test_dot_files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="search" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -246,14 +260,14 @@
     <property name="last_opened_file_path" value="$USER_HOME$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test/test_dot_files" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/blind" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/blind" />
       <recent name="$PROJECT_DIR$/informed/domain" />
       <recent name="$PROJECT_DIR$/informed" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/test_dot_files" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -332,32 +346,14 @@
     <recent_temporary>
       <list>
         <item itemvalue="Go Test.go test github.com/christat/search/test/informed" />
+        <item itemvalue="Go Test.go test github.com/christat/search/test/blind" />
         <item itemvalue="Go Test.TestGreedyBestFirst in github.com/christat/search/test/informed" />
         <item itemvalue="Go Test.TestAStar in github.com/christat/search/test/informed" />
         <item itemvalue="Go Test.TestDjikstra in github.com/christat/search/test/blind" />
-        <item itemvalue="Go Test.go test github.com/christat/search/test/blind" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestGreedyBestFirst_in_github_com_christat_search_test_informed - 2018.08.13 at 19h 28m 57s.xml">
-      <configuration name="TestGreedyBestFirst in github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGreedyBestFirst_in_github_com_christat_search_test_informed - 2018.08.13 at 19h 30m 26s.xml">
-      <configuration name="TestGreedyBestFirst in github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGreedyBestFirst_in_github_com_christat_search_test_informed - 2018.08.13 at 19h 30m 40s.xml">
-      <configuration name="TestGreedyBestFirst in github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGreedyBestFirst_in_github_com_christat_search_test_informed - 2018.08.13 at 19h 30m 46s.xml">
-      <configuration name="TestGreedyBestFirst in github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGreedyBestFirst_in_github_com_christat_search_test_informed - 2018.08.13 at 19h 30m 50s.xml">
-      <configuration name="TestGreedyBestFirst in github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestGreedyBestFirst_in_github_com_christat_search_test_informed - 2018.08.13 at 19h 32m 56s.xml">
-      <configuration name="TestGreedyBestFirst in github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestGreedyBestFirst_in_github_com_christat_search_test_informed - 2018.08.13 at 19h 48m 42s.xml">
       <configuration name="TestGreedyBestFirst in github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -370,21 +366,39 @@
     <history-entry file="TestGreedyBestFirst_in_github_com_christat_search_test_informed - 2018.08.13 at 19h 51m 36s.xml">
       <configuration name="TestGreedyBestFirst in github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="TestGreedyBestFirst_in_github_com_christat_search_test_informed - 2018.08.13 at 19h 51m 57s.xml">
+      <configuration name="TestGreedyBestFirst in github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestGreedyBestFirst_in_github_com_christat_search_test_informed - 2018.08.13 at 19h 51m 59s.xml">
+      <configuration name="TestGreedyBestFirst in github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_github_com_christat_search_test_informed - 2018.08.13 at 19h 52m 04s.xml">
+      <configuration name="go test github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_github_com_christat_search_test_informed - 2018.08.13 at 21h 36m 36s.xml">
+      <configuration name="go test github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_github_com_christat_search_test_blind - 2018.08.13 at 21h 36m 50s.xml">
+      <configuration name="go test github.com/christat/search/test/blind" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_github_com_christat_search_test_informed - 2018.08.13 at 21h 36m 58s.xml">
+      <configuration name="go test github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1280" y="23" width="1280" height="1010" extended-state="0" />
+    <frame x="1280" y="23" width="1280" height="1009" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2641357" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2641357" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="5" weight="0.4698795" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.46929824" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3231106" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.22343922" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3222749" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.22343922" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
@@ -426,18 +440,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/test/informed/greedy_best_first_test.go</url>
-          <line>62</line>
-          <properties />
-          <option name="timeStamp" value="114" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="115" />
+      <option name="time" value="117" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -517,7 +523,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../dot/parser/graph.go" />
     <entry file="file://$PROJECT_DIR$/../dot/parser/parser_utils_test.go" />
     <entry file="file://$PROJECT_DIR$/../gost/test/node_list_test.go">
       <provider selected="true" editor-type-id="text-editor">
@@ -555,13 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/informed/beam.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -758,45 +756,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/blind/djikstra_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../gost/queue/min_priority_queue.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-583">
           <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_dot_files/heuristic_graph_test.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blind/djikstra.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1005">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/informed/a_star.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="32" lean-forward="true" selection-end-line="85" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/informed/a_star_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" column="18" lean-forward="true" selection-end-line="51" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -821,17 +784,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/informed/greedy_best_first.go">
+    <entry file="file://$PROJECT_DIR$/test/informed/greedy_best_first_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="52">
+          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/informed/greedy_best_first_test.go">
+    <entry file="file://$PROJECT_DIR$/test/test_dot_files/heuristic_graph_test.dot">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
+        <state>
+          <caret column="27" lean-forward="true" selection-start-column="27" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/informed/beam.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/informed/a_star.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/blind/djikstra_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/informed/a_star_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blind/djikstra.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="e#16#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/informed/greedy_best_first.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding>
+            <element signature="e#16#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/best_first_helper.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#190#269#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
