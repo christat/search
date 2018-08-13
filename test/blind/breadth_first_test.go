@@ -19,14 +19,14 @@ func TestBreadthFirst(t *testing.T) {
 
 	path, found := search.BreadthFirst(origin, target)
 	if !found {
-		t.Errorf("Failed to find valid path in BFS test file")
+		t.Errorf("BFS failed to find valid path")
 	}
 	benchPath, found, bench := search.BenchmarkBreadthFirst(origin, target)
 	if !found {
-		t.Errorf("Failed to find valid path in BFS test file")
+		t.Errorf("Benchmark_BFS failed to find valid path")
 	}
 	if bench.TotalExpansions != 10 {
-		t.Errorf("Failed to compute node expansions for Benchmark_BFS")
+		t.Errorf("Benchmark_BFS expansions calculation is incorrect")
 	}
 
 	res, _ := tracer.TraceSolutionPath(origin, target, path)
@@ -36,19 +36,19 @@ func TestBreadthFirst(t *testing.T) {
 	foundSolution := res.String()
 	benchFoundSolution := benchRes.String()
 	if foundSolution != expectedSolution {
-		t.Errorf("Failed to find correct solution path in BFS test file.\nExpected: %v\nFound: %v", expectedSolution, foundSolution)
+		t.Errorf("Failed to find correct solution path in BFS.\nExpected: %v\nFound: %v", expectedSolution, foundSolution)
 	}
 	if benchFoundSolution != expectedSolution {
-		t.Errorf("Failed to find correct solution path in Benchmark_BFS test file.\nExpected: %v\nFound: %v", expectedSolution, benchFoundSolution)
+		t.Errorf("Failed to find correct solution path in Benchmark_BFS.\nExpected: %v\nFound: %v", expectedSolution, benchFoundSolution)
 	}
 
 	path, found = search.BreadthFirst(someVertex, origin)
 	if found {
-		t.Errorf("Found path up the tree in directed graph")
+		t.Errorf("BFS Found path up the tree in directed graph")
 	}
 
 	path, found = search.BreadthFirst(someVertex, target)
 	if found {
-		t.Errorf("Found path to target from isolated origin")
+		t.Errorf("BFS Found path to target from isolated origin")
 	}
 }

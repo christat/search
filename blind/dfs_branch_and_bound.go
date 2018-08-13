@@ -3,7 +3,7 @@ package search
 import (
 	"github.com/christat/search"
 	"math"
-	"fmt"
+	"time"
 )
 
 // BranchAndBound performs depth search iteratively. An upper bound is set every time a solution is found,
@@ -12,77 +12,98 @@ import (
 // Paramter bound can be left as default float64 (0); the algorithm will assume an initial bound of plus infinity.
 func DFSBranchAndBound(origin, target search.WeightedState, bound float64) (path map[search.State]search.State, found bool, cost float64) {
 	path, bound ,cost = initBnBVariables(bound)
+
+	var solutionPath map[search.State]search.State
 	// The expansion order in root dictates the order of branch expansions;
 	// hence the algorithm follows a left-to-right DFS "scanning" pattern.
-
-	neighbors := origin.Neighbors()
-
-	solutionCost := math.Inf(0)
-	for _, neighbor := range neighbors {
-		// because of Go's inflexible type system, neighbor must be coerced to allow access to cost/heuristic functions
-		solutionPath, solutionFound, newCost := costBoundSearch(origin, neighbor.(search.HeuristicState), target, cost, bound, path)
-		if solutionFound && newCost < bound && newCost < solutionCost {
+	for _, neighbor := range origin.Neighbors() {
+		// because of Go's inflexible type system, neighbor must be coerced to allow access to cost function
+		currentPath, solutionFound, currentCost := costBoundSearch(origin, origin, neighbor.(search.HeuristicState), target, cost, bound, path)
+		if solutionFound && currentCost < bound {
 			found = true
-			bound = newCost
-			solutionCost = newCost
-			path = solutionPath
+			bound = currentCost
+			solutionPath = currentPath
 		}
 	}
-	return path, found, solutionCost
+	return solutionPath, found, bound
 }
 
-func reverse(s []search.State) []search.State {
-	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
-		s[i], s[j] = s[j], s[i]
-	}
-	return s
-}
-
-func costBoundSearch(from, to, target search.WeightedState, branchCost, bound float64, path map[search.State]search.State) (solutionPath map[search.State]search.State, found bool, cost float64) {
+func costBoundSearch(origin, from, to, target search.WeightedState, branchCost, bound float64, path map[search.State]search.State) (solutionPath map[search.State]search.State, found bool, cost float64) {
 	expansionCost := from.Cost(to)
-	fmt.Printf("expanding %v -> %v with cost %v\n", from.Name(), to.Name(), expansionCost)
 	if branchCost + expansionCost < bound {
 		path[to] = from
 		cost = branchCost + expansionCost
-		fmt.Printf("Below bound; cost so far is %v and bound %v\n", cost, bound)
 		if to.Equals(target) {
-			fmt.Printf("solution found! FROM %v with COST %v\n", from.Name(), cost)
 			solutionPath = copyPath(path)
 			bound = cost
 			found = true
-		}
-		for _, neighbor := range to.Neighbors() {
-			// because of Go's inflexible type system, neighbor must be coerced to allow access to cost/heuristic functions
-			subPath, subFound, subCost := costBoundSearch(to, neighbor.(search.HeuristicState), target, cost, bound, path)
-			if subFound && subCost < bound {
-				found = true
-				solutionPath = subPath
-				bound = subCost
+		} else {
+			oldCost := cost
+			for _, neighbor := range to.Neighbors() {
+				// because of Go's inflexible type system, neighbor must be coerced to allow access to cost/heuristic functions
+				branchPath, solutionBranch, branchCost := costBoundSearch(origin, to, neighbor.(search.HeuristicState), target, oldCost, bound, path)
+				if solutionBranch && branchCost < bound {
+					found = true
+					bound = branchCost
+					solutionPath = branchPath
+					cost = bound
+				}
 			}
 		}
-	} else {
-		fmt.Printf("ABORT: cost %v and bound %v; pruning branch..\n", branchCost + expansionCost, bound)
 	}
 	return
 }
 
 // Benchmark variant of DFSBranchAndBound.
 // It measures execution parameters (time, nodes expanded) them in a search.AlgorithmBenchmark entity.
-/*func BenchmarkDFSBranchAndBound(origin, target search.WeightedState, useNodeStack ...bool) (path map[search.State]search.State, found bool, cost float64, bench search.AlgorithmBenchmark) {
-	open, path, foundPath, bound, totalCost := initBnBVariables(useNodeStack)
-	open.Push(origin)
+func BenchmarkDFSBranchAndBound(origin, target search.WeightedState, bound float64) (path map[search.State]search.State, found bool, cost float64, bench search.AlgorithmBenchmark) {
+	path, bound ,cost = initBnBVariables(bound)
 
 	start := time.Now()
 	var expansions uint = 0
 
-	for open.Size() > 0 {
-		vertex := open.Pop().(search.WeightedState)
-		expansions++
-		totalCost, bound, found = evaluateNeighborsAndUpdateCost(totalCost, bound, vertex, target, found, path, foundPath, open)
+	var solutionPath map[search.State]search.State
+	// The expansion order in root dictates the order of branch expansions;
+	// hence the algorithm follows a left-to-right DFS "scanning" pattern.
+	for _, neighbor := range origin.Neighbors() {
+		// because of Go's inflexible type system, neighbor must be coerced to allow access to cost/heuristic functions
+		currentPath, solutionFound, currentCost := benchmarkCostBoundSearch(origin, origin, neighbor.(search.HeuristicState), target, cost, bound, path, &expansions)
+		if solutionFound && currentCost < bound {
+			found = true
+			bound = currentCost
+			solutionPath = currentPath
+		}
 	}
 	elapsed := time.Since(start)
-	return foundPath, found, bound, search.AlgorithmBenchmark{ElapsedTime: elapsed, TotalExpansions: expansions}
-}*/
+	return solutionPath, found, bound, search.AlgorithmBenchmark{ElapsedTime: elapsed, TotalExpansions: expansions}
+}
+
+func benchmarkCostBoundSearch(origin, from, to, target search.WeightedState, branchCost, bound float64, path map[search.State]search.State, expansions *uint) (solutionPath map[search.State]search.State, found bool, cost float64) {
+	*expansions = *expansions + 1
+	expansionCost := from.Cost(to)
+	if branchCost + expansionCost < bound {
+		path[to] = from
+		cost = branchCost + expansionCost
+		if to.Equals(target) {
+			solutionPath = copyPath(path)
+			bound = cost
+			found = true
+		} else {
+			oldCost := cost
+			for _, neighbor := range to.Neighbors() {
+				// because of Go's inflexible type system, neighbor must be coerced to allow access to cost/heuristic functions
+				branchPath, solutionBranch, branchCost := benchmarkCostBoundSearch(origin, to, neighbor.(search.HeuristicState), target, oldCost, bound, path, expansions)
+				if solutionBranch && branchCost < bound {
+					found = true
+					bound = branchCost
+					solutionPath = branchPath
+					cost = bound
+				}
+			}
+		}
+	}
+	return
+}
 
 func initBnBVariables(initialBound float64) (path map[search.State]search.State, bound, cost float64) {
 	if bound == 0 {

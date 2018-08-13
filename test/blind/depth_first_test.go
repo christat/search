@@ -20,14 +20,14 @@ func TestDepthFirst(t *testing.T) {
 
 	path, found := search.DepthFirst(origin, target)
 	if !found {
-		t.Errorf("Failed to find valid path in DFS test file")
+		t.Errorf("DFS failed to find valid path")
 	}
 	benchPath, found, bench := search.BenchmarkDepthFirst(origin, target)
 	if !found {
-		t.Errorf("Failed to find valid path in Benchmark_DFS test file")
+		t.Errorf("Benchmark_DFS failed to find valid path")
 	}
 	if bench.TotalExpansions != 9 {
-		t.Errorf("Failed to compute node expansions for Benchmark_BFS")
+		t.Errorf("Benchmark_BFS expansions calculation incorrect")
 	}
 
 	res, _ := tracer.TraceSolutionPath(origin, target, path)
@@ -37,19 +37,19 @@ func TestDepthFirst(t *testing.T) {
 	foundSolution := res.String()
 	benchFoundSolution := benchRes.String()
 	if foundSolution != expectedSolution {
-		t.Errorf("Failed to find correct solution path in DFS test file.\nExpected: %v\nFound: %v", expectedSolution, foundSolution)
+		t.Errorf("Failed to find correct solution path in DFS.\nExpected: %v\nFound: %v", expectedSolution, foundSolution)
 	}
 	if benchFoundSolution != expectedSolution {
-		t.Errorf("Failed to find correct solution path in Benchmark_DFS test file.\nExpected: %v\nFound: %v", expectedSolution, benchFoundSolution)
+		t.Errorf("Failed to find correct solution path in Benchmark_DFS.\nExpected: %v\nFound: %v", expectedSolution, benchFoundSolution)
 	}
 
 	path, found = search.DepthFirst(someVertex, origin)
 	if found {
-		t.Errorf("Found path up the tree in directed graph")
+		t.Errorf("DFS found path up the tree in directed graph")
 	}
 
 	path, found = search.DepthFirst(isolatedVertex, target)
 	if found {
-		t.Errorf("Found path to target from isolated origin")
+		t.Errorf("DFS found path to target from isolated origin")
 	}
 }

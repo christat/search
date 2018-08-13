@@ -19,21 +19,21 @@ func TestDjikstra(t *testing.T) {
 
 	path, found, cost := search.Djikstra(origin, target)
 	if !found {
-		t.Errorf("Failed to find valid path in Djikstra test file")
+		t.Errorf("Djikstra failed to find valid path")
 	}
 	if cost != 9 {
-		t.Errorf("Cost computation is incorrect for Djikstra test file")
+		t.Errorf("Djikstra cost computation is incorrect")
 	}
 
 	benchPath, found, cost, bench := search.BenchmarkDjikstra(origin, target)
 	if !found {
-		t.Errorf("Failed to find valid path in Benchmark_Djikstra test file")
+		t.Errorf("Benchmark_Djikstra failed to find valid path")
 	}
 	if cost != 9 {
-		t.Errorf("Cost computation is incorrect for Benchmark_Djikstra test file")
+		t.Errorf("Benchmark_Djikstra cost computation is incorrect")
 	}
 	if bench.TotalExpansions != 5 {
-		t.Errorf("Failed to correctly compute Benchmark_Djikstra node expansions")
+		t.Errorf("Benchmark_Djikstra expansions calculation is incorrect")
 	}
 
 	res, _ := tracer.TraceSolutionPath(origin, target, path)
@@ -43,9 +43,9 @@ func TestDjikstra(t *testing.T) {
 	foundSolution := res.String()
 	benchFoundSolution := benchRes.String()
 	if foundSolution != expectedSolution {
-		t.Errorf("Failed to find correct solution path in Djikstra test file.\nExpected: %v\nFound: %v", expectedSolution, foundSolution)
+		t.Errorf("Failed to find correct solution path in Djikstra.\nExpected: %v\nFound: %v", expectedSolution, foundSolution)
 	}
 	if benchFoundSolution != expectedSolution {
-		t.Errorf("Failed to find correct solution path in Benchmark_Djikstra test file.\nExpected: %v\nFound: %v", expectedSolution, benchFoundSolution)
+		t.Errorf("Failed to find correct solution path in Benchmark_Djikstra.\nExpected: %v\nFound: %v", expectedSolution, benchFoundSolution)
 	}
 }

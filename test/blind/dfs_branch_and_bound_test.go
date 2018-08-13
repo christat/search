@@ -20,33 +20,33 @@ func TestBranchAndBound(t *testing.T) {
 
 	path, found, cost := search.DFSBranchAndBound(origin, target, 0)
 	if !found {
-		t.Errorf("DFSBnB failed to find valid path")
+		t.Errorf("DFSBnB failed to find a valid path")
 	}
 	if cost != 11 {
 		t.Errorf("DFSBnB cost computation is incorrect")
 	}
 
-	/*benchPath, found, cost, bench := search.BenchmarkDFSBranchAndBound(origin, target)
+	benchPath, found, cost, bench := search.BenchmarkDFSBranchAndBound(origin, target, 0)
 	if !found {
-		t.Errorf("Failed to find valid path in Benchmark_Djikstra test file")
+		t.Errorf("Benchmark_DFSBnB failed to find a valid path")
 	}
-	if cost <= 1 {
-		t.Errorf("Cost computation is incorrect for Benchmark_Djikstra test file")
+	if cost != 11 {
+		t.Errorf("Benchmark_DFSBnB cost computation is incorrect")
 	}
-	if bench.TotalExpansions <= 1 {
-		t.Errorf("Failed to correctly compute Benchmark_Djikstra node expansions")
-	}*/
+	if bench.TotalExpansions != 13 {
+		t.Errorf("Benchmark_DFSBnB expansions calculation is incorrect")
+	}
 
 	res, _ := tracer.TraceSolutionPath(origin, target, path)
-	//benchRes, _ := tracer.TraceSolutionPath(origin, target, benchPath)
+	benchRes, _ := tracer.TraceSolutionPath(origin, target, benchPath)
 
 	expectedSolution := "q1 -> q3 -> q7 -> q6 -> q11"
 	foundSolution := res.String()
-	//benchFoundSolution := benchRes.String()
+	benchFoundSolution := benchRes.String()
 	if foundSolution != expectedSolution {
 		t.Errorf("Failed to find correct solution path in DFSBnB test.\nExpected: %v\nFound: %v", expectedSolution, foundSolution)
 	}
-	/*if benchFoundSolution != expectedSolution {
-		t.Errorf("Failed to find correct solution path in Benchmark_Djikstra test file.\nExpected: %v\nFound: %v", expectedSolution, benchFoundSolution)
-	}*/
+	if benchFoundSolution != expectedSolution {
+		t.Errorf("Failed to find correct solution path in Benchmark_DFSBnB test.\nExpected: %v\nFound: %v", expectedSolution, benchFoundSolution)
+	}
 }

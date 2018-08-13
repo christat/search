@@ -20,14 +20,14 @@ func TestIterativeDeepening(t *testing.T) {
 
 	path, found := search.IterativeDeepening(origin, target, 3)
 	if !found {
-		t.Errorf("Failed to find valid path in IDS test file")
+		t.Errorf("IDS failed to find valid path")
 	}
 	benchPath, found, bench := search.BenchmarkIterativeDeepening(origin, target, 10)
 	if !found {
-		t.Errorf("Failed to find valid path in Benchmark_IDS test file")
+		t.Errorf("Benchmark_IDS failed to find valid path")
 	}
 	if bench.TotalExpansions != 7 {
-		t.Errorf("Failed to compute node expansions for Benchmark_IDS")
+		t.Errorf("Benchmark_IDS expansions calculation is incorrect")
 	}
 
 	res, _ := tracer.TraceSolutionPath(origin, target, path)
@@ -37,21 +37,21 @@ func TestIterativeDeepening(t *testing.T) {
 	foundSolution := res.String()
 	benchFoundSolution := benchRes.String()
 	if foundSolution != expectedSolution {
-		t.Errorf("Failed to find correct solution path in IDS test file.\nExpected: %v\nFound: %v", expectedSolution, foundSolution)
+		t.Errorf("Failed to find correct solution path in IDS.\nExpected: %v\nFound: %v", expectedSolution, foundSolution)
 	}
 	if benchFoundSolution != expectedSolution {
-		t.Errorf("Failed to find correct solution path in Benchmark_IDS test file.\nExpected: %v\nFound: %v", expectedSolution, benchFoundSolution)
+		t.Errorf("Failed to find correct solution path in Benchmark_IDS.\nExpected: %v\nFound: %v", expectedSolution, benchFoundSolution)
 	}
 
 	path, found = search.IterativeDeepening(origin, target, 1)
 	if found {
-		t.Errorf("Found path with not enough depth assigned")
+		t.Errorf("IDS found path with not enough depth assigned")
 	}
 
 	path, found, bench = search.BenchmarkIterativeDeepening(someVertex, bidirectionalAccessVertex, 4)
 	res, _ = tracer.TraceSolutionPath(someVertex, bidirectionalAccessVertex, path)
 	if !found || res.String() != "3 -> 6 -> 10 -> 5" {
-		t.Errorf("Failed to find cyclic path to target")
+		t.Errorf("IDS failed to find cyclic path to target")
 	}
 }
 
