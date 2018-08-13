@@ -1,0 +1,28 @@
+digraph Romania {
+
+    // This particular digraph represents the classic distance map of Romania with Manhattan distance to Bucharest.
+    // Extracted from chapter 3 of "Artificial Intelligence: A Modern Approach" by Stuart J. Russel and Peter Norvig.
+
+    Oradea [manhattan = 380] -- [distance = 71] Zerind;
+    Oradea -- [distance = 151] Sibiu;
+    Zerind [manhattan = 374] -- [distance = 75] Arad;
+    Arad [manhattan = 366] -- [distance = 140] Sibiu;
+    Arad -- [distance = 118] Timisoara;
+    Timisioara [manhattan = 329] -- [distance = 111] Lugoj;
+    Lugoj [manhattan = 244] -- [distance = 70] Mehadia;
+    Mehadia [manhattan = 75] -- [distance = 75] Dobreta;
+    Dobreta [manhattan = 242] -- [distance = 120] Craiova;
+    Craiova [manhattan = 160] -- [distance = 148] RimnicuValcea;
+    RimnicuValcea [manhattan = 193] -- [distance = 80] Sibiu;
+    RimnicuValcea -- [distance = 97] Pitesti;
+    Pitesti [manhattan = 100] -- [distance = 101] Bucharest;
+    Sibiu [manhattan = 253] -- [distance = 99] Fagaras;
+    Fagaras [manhattan = 176] -- [distance = 211] Bucharest;
+    Giurgiu [manhattan = 77] -- [distance = 90] Bucharest;
+    Eforie [manhattan = 161] -- [distance = 86] Hirsova;
+    Hirsova [manhattan = 151] -- [distance = 98] Urziceni;
+    Urziceni [manhattan = 80] -- [distance = 85] Bucharest;
+    Neamnt [manhattan = 234] -- [distance = 87] Lasi;
+    Lasi [manhattan = 226] -- [distance = 92] Vaslui;
+    Vaslui [manhattan = 199] -- [distance = 142] Urziceni;
+}
