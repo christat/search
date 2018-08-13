@@ -43,13 +43,20 @@ func checkVertexAndPushNeighbors(vertex, target search.State, open stack.Stack, 
 		found = true
 		return
 	}
-	neighbors := vertex.Neighbors()
-	for _, neighbor := range neighbors {
+	for _, neighbor := range vertex.Neighbors() {
 		_, visited := path[neighbor]
 		if !visited {
 			open.Push(neighbor)
 			path[neighbor] = vertex
 		}
+	}
+	return
+}
+
+func copyPath(original map[search.State]search.State) (copy map[search.State]search.State) {
+	copy = make(map[search.State]search.State, len(original))
+	for key, value := range original {
+		copy[key] = value
 	}
 	return
 }

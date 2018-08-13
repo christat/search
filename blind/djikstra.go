@@ -6,12 +6,12 @@ import (
 	"time"
 )
 
+// Djikstra implements the well known algorithm of said name.
+// Even though the function returns the shortest path between two vertices in a graph,
+// an optimal traversal between any two points can be built by using the return path map and func TraceSolutionPath.
+// If a path exists, it will be indicated by found and the traversal cost returned.
 func Djikstra(origin, target search.WeightedState) (path map[search.State]search.State, found bool, cost float64) {
-	path = make(map[search.State]search.State)
-	cumulativeCost := make(map[search.State]float64)
-	queue := new(gost.MinPriorityQueue) // Min as we need to obtain lowest costs first
-	open := make(map[string]bool) // A separate open/closed map is needed to avoid re-insertion and re-inspection of vertices.
-	closed := make(map[string]bool)
+	path, cumulativeCost, queue, open, closed := initDjikstraVariables()
 
 	queue.Enqueue(origin, 0)
 	cumulativeCost[origin] = 0
@@ -26,12 +26,10 @@ func Djikstra(origin, target search.WeightedState) (path map[search.State]search
 	return path, found, cumulativeCost[target]
 }
 
+// Benchmark variant of Djikstra.
+// It measures execution parameters (time, nodes expanded) them in a search.AlgorithmBenchmark entity.
 func BenchmarkDjikstra(origin, target search.WeightedState) (path map[search.State]search.State, found bool, cost float64, bench search.AlgorithmBenchmark) {
-	path = make(map[search.State]search.State)
-	cumulativeCost := make(map[search.State]float64)
-	queue := new(gost.MinPriorityQueue) // Min as we need to obtain lowest costs first
-	open := make(map[string]bool) // A separate open/closed map is needed to avoid re-insertion and re-inspection of vertices.
-	closed := make(map[string]bool)
+	path, cumulativeCost, queue, open, closed := initDjikstraVariables()
 
 	start := time.Now()
 	var expansions uint = 0
@@ -49,6 +47,15 @@ func BenchmarkDjikstra(origin, target search.WeightedState) (path map[search.Sta
 	}
 	elapsed := time.Since(start)
 	return path, found, cumulativeCost[target], search.AlgorithmBenchmark{ElapsedTime: elapsed, TotalExpansions: expansions}
+}
+
+func initDjikstraVariables() (path map[search.State]search.State, cumulativeCost map[search.State]float64, queue *gost.MinPriorityQueue, open, closed map[string]bool) {
+	path = make(map[search.State]search.State)
+	cumulativeCost = make(map[search.State]float64)
+	queue = new(gost.MinPriorityQueue) // Min as we need to obtain lowest costs first
+	open = make(map[string]bool) // A separate open/closed map is needed to avoid re-insertion and re-inspection of vertices.
+	closed = make(map[string]bool)
+	return
 }
 
 func enqueueUnvisitedLowerCostNeighbors(vertex, target search.WeightedState, queue *gost.MinPriorityQueue, open map[string]bool, closed map[string]bool, cumulativeCost map[search.State]float64, path map[search.State]search.State) (found bool) {

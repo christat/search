@@ -14,3 +14,7 @@ type AlgorithmBenchmark struct {
 func (ab AlgorithmBenchmark) String() string {
 	return fmt.Sprintf("Execution took %v ns and expanded %v nodes.", ab.ElapsedTime.Nanoseconds(), ab.TotalExpansions)
 }
+
+func (ab AlgorithmBenchmark) GetExpandedNodesPerSecond() float64 {
+	return float64(ab.TotalExpansions) / ab.ElapsedTime.Seconds()
+}

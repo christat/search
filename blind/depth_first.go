@@ -25,6 +25,8 @@ func DepthFirst(origin, target search.State, useNodeStack ...bool) (path map[sea
 	return path, found
 }
 
+// Benchmark variant of DepthFirst.
+// It measures execution parameters (time, nodes expanded) them in a search.AlgorithmBenchmark entity.
 func BenchmarkDepthFirst(origin, target search.State, useNodeStack ...bool) (path map[search.State]search.State, found bool, bench search.AlgorithmBenchmark) {
 	path = make(map[search.State]search.State)
 	open := selectStackImplementation(useNodeStack...)

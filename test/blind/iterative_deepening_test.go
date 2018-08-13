@@ -8,7 +8,7 @@ import (
 )
 
 func TestIterativeDeepening(t *testing.T) {
-	ok, graph := dot.ParseFile("../test_dot_files/uniform_cost_cyclic_graph_test.dot", false)
+	ok, graph := dot.ParseFile("../test_dot_files/cyclic_graph_test.dot", false)
 	if !ok {
 		t.Errorf("Failed to parse DFS test file")
 	}

@@ -5,6 +5,9 @@ import (
 	"time"
 )
 
+// BreadthFirst implements the Breadth First Search algorithm.
+// The origin and target states must fulfill the State interface.
+// Optionally, a single-linked list backed stack can be enforced with useNodeQueue.
 func BreadthFirst(origin, target search.State, useNodeQueue ...bool) (path map[search.State]search.State, found bool) {
 	path = make(map[search.State]search.State)
 	open := selectQueueImplementation(useNodeQueue...)
@@ -20,6 +23,8 @@ func BreadthFirst(origin, target search.State, useNodeQueue ...bool) (path map[s
 	return path, found
 }
 
+// Benchmark variant of BreadthFirst.
+// It measures execution parameters (time, nodes expanded) them in a search.AlgorithmBenchmark entity.
 func BenchmarkBreadthFirst(origin, target search.State, useNodeQueue ...bool) (path map[search.State]search.State, found bool, bench search.AlgorithmBenchmark) {
 	path = make(map[search.State]search.State)
 	open := selectQueueImplementation(useNodeQueue...)
