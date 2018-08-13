@@ -3,12 +3,17 @@ package search
 import (
 	"github.com/christat/gost/queue"
 	"time"
+	"fmt"
 )
 
 // Best First Search underpins several algorithms, such as Greedy BFS or A*.
 // The main difference comes in the enqueuing logic, which is specific to the algorithm itself.
-func BestFirst(origin, target HeuristicState, bfsEnqueuingCallback BFSEnqueuingCallback) (path map[State]State, found bool, cost float64) {
+func BestFirst(origin, target HeuristicState, bfsEnqueuingCallback BFSEnqueuingCallback) (path map[State]State, found bool, cost float64, err error) {
 	path, cumulativeCost, queue, open, closed := initBestFirstVariables()
+
+	if bfsEnqueuingCallback == nil {
+		return path, found, 0, fmt.Errorf("enqueuing Callback not provided! Best First Search cannot be executed")
+	}
 
 	queue.Enqueue(origin, 0)
 	cumulativeCost[origin] = 0
@@ -20,11 +25,15 @@ func BestFirst(origin, target HeuristicState, bfsEnqueuingCallback BFSEnqueuingC
 			break
 		}
 	}
-	return path, found, cumulativeCost[target]
+	return path, found, cumulativeCost[target], nil
 }
 
-func BenchmarkBestFirst(origin, target HeuristicState, bfsEnqueuingCallback BFSEnqueuingCallback) (path map[State]State, found bool, cost float64, bench AlgorithmBenchmark) {
+func BenchmarkBestFirst(origin, target HeuristicState, bfsEnqueuingCallback BFSEnqueuingCallback) (path map[State]State, found bool, cost float64, bench AlgorithmBenchmark, err error) {
 	path, cumulativeCost, queue, open, closed := initBestFirstVariables()
+
+	if bfsEnqueuingCallback == nil {
+		return path, found, 0, AlgorithmBenchmark{}, fmt.Errorf("enqueuing Callback not provided! Best First Search cannot be executed")
+	}
 
 	start := time.Now()
 	var expansions uint = 0
@@ -41,7 +50,7 @@ func BenchmarkBestFirst(origin, target HeuristicState, bfsEnqueuingCallback BFSE
 		}
 	}
 	elapsed := time.Since(start)
-	return path, found, cumulativeCost[target], AlgorithmBenchmark{ElapsedTime: elapsed, TotalExpansions: expansions}
+	return path, found, cumulativeCost[target], AlgorithmBenchmark{ElapsedTime: elapsed, TotalExpansions: expansions}, nil
 }
 
 func initBestFirstVariables() (path map[State]State, cumulativeCost map[State]float64, queue *gost.MinPriorityQueue, open, closed map[string]bool) {

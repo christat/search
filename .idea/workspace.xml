@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e541a068-ed98-430c-a1a5-fbb19698b97e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/best_first_helper.go" beforeDir="false" afterPath="$PROJECT_DIR$/best_first_helper.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blind/djikstra.go" beforeDir="false" afterPath="$PROJECT_DIR$/blind/djikstra.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/informed/a_star.go" beforeDir="false" afterPath="$PROJECT_DIR$/informed/a_star.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/informed/greedy_best_first.go" beforeDir="false" afterPath="$PROJECT_DIR$/informed/greedy_best_first.go" afterDir="false" />
@@ -25,8 +26,8 @@
       <file leaf-file-name="djikstra.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blind/djikstra.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state relative-caret-position="195">
+              <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
               <folding>
                 <element signature="e#16#98#0" expanded="true" />
               </folding>
@@ -38,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/informed/greedy_best_first.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="27" />
               <folding>
                 <element signature="e#16#98#0" expanded="true" />
               </folding>
@@ -46,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="best_first_helper.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="best_first_helper.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/best_first_helper.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="537">
+              <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
               <folding>
                 <element signature="e#190#269#0" expanded="true" />
               </folding>
@@ -67,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="a_star.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="a_star.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/informed/a_star.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state relative-caret-position="180">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -181,10 +182,10 @@
         <option value="$PROJECT_DIR$/test/informed/greedy_best_first_test.go" />
         <option value="$PROJECT_DIR$/informed/best_first.go" />
         <option value="$PROJECT_DIR$/informed/best_first_helper.go" />
+        <option value="$PROJECT_DIR$/best_first_helper.go" />
+        <option value="$PROJECT_DIR$/informed/greedy_best_first.go" />
         <option value="$PROJECT_DIR$/blind/djikstra.go" />
         <option value="$PROJECT_DIR$/informed/a_star.go" />
-        <option value="$PROJECT_DIR$/informed/greedy_best_first.go" />
-        <option value="$PROJECT_DIR$/best_first_helper.go" />
       </list>
     </option>
   </component>
@@ -397,7 +398,7 @@
       <window_info anchor="bottom" id="Run" order="5" weight="0.46929824" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3222749" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32127193" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.22343922" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -805,13 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/informed/a_star.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/blind/djikstra_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
@@ -828,18 +822,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blind/djikstra.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#16#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/informed/greedy_best_first.go">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding>
             <element signature="e#16#98#0" expanded="true" />
           </folding>
@@ -848,11 +832,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/best_first_helper.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="537">
+          <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
           <folding>
             <element signature="e#190#269#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/informed/greedy_best_first.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="e#16#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/informed/a_star.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
