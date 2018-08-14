@@ -2,8 +2,6 @@
 [![Build Status](https://travis-ci.org/christat/search.svg?branch=master)](https://travis-ci.org/christat/search)
 # Search (Algorithms) - a minimal library
 
-A minimal search algorithms library, aimed (mainly) at minimization-problem solving and educational purposes.
-
 The package is subdivided with two main sub-packages:
 
 - **blind** algorithms
