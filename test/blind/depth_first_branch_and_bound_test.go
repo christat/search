@@ -18,7 +18,7 @@ func TestBranchAndBound(t *testing.T) {
 	origin := vertexMap["q1"]
 	target := vertexMap["q11"]
 
-	path, found, cost := search.DFSBranchAndBound(origin, target, 0)
+	path, found, cost := search.DepthFirstBranchAndBound(origin, target, 0)
 	if !found {
 		t.Errorf("DFSBnB failed to find a valid path")
 	}
@@ -26,7 +26,7 @@ func TestBranchAndBound(t *testing.T) {
 		t.Errorf("DFSBnB cost computation is incorrect")
 	}
 
-	benchPath, found, cost, bench := search.BenchmarkDFSBranchAndBound(origin, target, 0)
+	benchPath, found, cost, bench := search.BenchmarkDepthFirstBranchAndBound(origin, target, 0)
 	if !found {
 		t.Errorf("Benchmark_DFSBnB failed to find a valid path")
 	}

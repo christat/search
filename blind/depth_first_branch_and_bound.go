@@ -10,7 +10,7 @@ import (
 // pruning costlier descendants and stopping once no better solution was found. Because of its nature (minimization of positive costs)
 // it is not expected to work correctly with negative costs. Maximization problems should be redefined accordingly.
 // Paramter bound can be left as default float64 (0); the algorithm will assume an initial bound of plus infinity.
-func DFSBranchAndBound(origin, target search.WeightedState, bound float64) (path map[search.State]search.State, found bool, cost float64) {
+func DepthFirstBranchAndBound(origin, target search.WeightedState, bound float64) (path map[search.State]search.State, found bool, cost float64) {
 	path, bound ,cost = initBnBVariables(bound)
 
 	var solutionPath map[search.State]search.State
@@ -52,9 +52,9 @@ func costBoundSearch(origin, from, to, target search.WeightedState, branchCost, 
 	return
 }
 
-// Benchmark variant of DFSBranchAndBound.
+// Benchmark variant of DepthFirstBranchAndBound.
 // It measures execution parameters (time, nodes expanded) them in a search.AlgorithmBenchmark entity.
-func BenchmarkDFSBranchAndBound(origin, target search.WeightedState, bound float64) (path map[search.State]search.State, found bool, cost float64, bench search.AlgorithmBenchmark) {
+func BenchmarkDepthFirstBranchAndBound(origin, target search.WeightedState, bound float64) (path map[search.State]search.State, found bool, cost float64, bench search.AlgorithmBenchmark) {
 	path, bound ,cost = initBnBVariables(bound)
 
 	start := time.Now()

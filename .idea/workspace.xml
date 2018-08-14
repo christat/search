@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e541a068-ed98-430c-a1a5-fbb19698b97e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blind/dfs_branch_and_bound.go" beforeDir="false" afterPath="$PROJECT_DIR$/blind/dfs_branch_and_bound.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blind/iterative_deepening.go" beforeDir="false" afterPath="$PROJECT_DIR$/blind/iterative_deepening.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/informed/iterative_deepening_a_star.go" beforeDir="false" afterPath="$PROJECT_DIR$/informed/iterative_deepening_a_star.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/blind/dfs_branch_and_bound_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/blind/dfs_branch_and_bound_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/blind/iterative_deepening_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/blind/iterative_deepening_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/informed/iterative_deepening_a_star_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/informed/iterative_deepening_a_star_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_dot_files/heuristic_graph_test.dot" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_dot_files/heuristic_graph_test.dot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blind/depth_first_branch_and_bound.go" beforeDir="false" afterPath="$PROJECT_DIR$/blind/depth_first_branch_and_bound.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/blind/depth_first_branch_and_bound_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/blind/depth_first_branch_and_bound_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,75 +22,24 @@
     <option name="myAutoScrollToSource" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="dfs_branch_and_bound.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blind/dfs_branch_and_bound.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
-              <caret line="81" column="23" lean-forward="true" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="164">
+                <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dfs_branch_and_bound_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/blind/dfs_branch_and_bound_test.go">
+      <file leaf-file-name="benchmark_types.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/benchmark_types.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-              <folding>
-                <element signature="e#20#141#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="iterative_deepening_a_star_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/informed/iterative_deepening_a_star_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-              <folding>
-                <element signature="e#23#144#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="iterative_deepening.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blind/iterative_deepening.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="iterative_deepening_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/blind/iterative_deepening_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="heuristic_graph_test.dot" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_dot_files/heuristic_graph_test.dot">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="iterative_deepening_a_star.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/informed/iterative_deepening_a_star.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-              <folding>
-                <element signature="e#16#64#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="75">
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -147,8 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/uninformed/breadth_first_test.go" />
-        <option value="$PROJECT_DIR$/uninformed/djikstra.go" />
         <option value="$PROJECT_DIR$/uninformed/iterative_deepening_depth_first.go" />
         <option value="$PROJECT_DIR$/uninformed/iterative_deepening.go" />
         <option value="$PROJECT_DIR$/test/blind/iterative_deepening_depth_first.go" />
@@ -191,13 +133,15 @@
         <option value="$PROJECT_DIR$/informed/hill_climbing.go" />
         <option value="$PROJECT_DIR$/best_first_helper.go" />
         <option value="$PROJECT_DIR$/test/informed/beam_test.go" />
-        <option value="$PROJECT_DIR$/test/test_dot_files/heuristic_graph_test.dot" />
-        <option value="$PROJECT_DIR$/test/informed/iterative_deepening_a_star_test.go" />
-        <option value="$PROJECT_DIR$/blind/dfs_branch_and_bound.go" />
         <option value="$PROJECT_DIR$/test/blind/dfs_branch_and_bound_test.go" />
         <option value="$PROJECT_DIR$/test/blind/iterative_deepening_test.go" />
         <option value="$PROJECT_DIR$/blind/iterative_deepening.go" />
         <option value="$PROJECT_DIR$/informed/iterative_deepening_a_star.go" />
+        <option value="$PROJECT_DIR$/test/test_dot_files/heuristic_graph_test.dot" />
+        <option value="$PROJECT_DIR$/test/informed/iterative_deepening_a_star_test.go" />
+        <option value="$PROJECT_DIR$/blind/dfs_branch_and_bound.go" />
+        <option value="$PROJECT_DIR$/blind/depth_first_branch_and_bound.go" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -231,11 +175,6 @@
             <path>
               <item name="search" type="b2602c69:ProjectViewProjectNode" />
               <item name="search" type="462c0819:PsiDirectoryNode" />
-              <item name="blind" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="search" type="b2602c69:ProjectViewProjectNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
               <item name="informed" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -248,12 +187,6 @@
               <item name="search" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="blind" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="search" type="b2602c69:ProjectViewProjectNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="informed" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="search" type="b2602c69:ProjectViewProjectNode" />
@@ -294,7 +227,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.go test github.com/christat/search/test/blind">
+  <component name="RunManager" selected="Go Test.go test github.com/christat/search/test/informed">
     <configuration name="TestBenchmarkIterations in github.com/christat/search/test/blind" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="search" />
       <working_directory value="$PROJECT_DIR$/test/blind" />
@@ -305,17 +238,6 @@
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
       <pattern value="^TestBenchmarkIterations$" />
-    </configuration>
-    <configuration name="TestBranchAndBound in github.com/christat/search/test/blind" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="search" />
-      <working_directory value="$PROJECT_DIR$/test/blind" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/christat/search/test/blind" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestBranchAndBound$" />
     </configuration>
     <configuration name="TestIterativeDeepening in github.com/christat/search/test/blind" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="search" />
@@ -349,30 +271,34 @@
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
     </configuration>
+    <configuration name="go test github.com/christat/search/test/informed" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="search" />
+      <working_directory value="$PROJECT_DIR$/test/informed" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/christat/search/test/informed" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+    </configuration>
     <list>
       <item itemvalue="Go Test.go test github.com/christat/search/test/blind" />
-      <item itemvalue="Go Test.TestBranchAndBound in github.com/christat/search/test/blind" />
       <item itemvalue="Go Test.TestIterativeDeepeningAStar in github.com/christat/search/test/informed" />
       <item itemvalue="Go Test.TestBenchmarkIterations in github.com/christat/search/test/blind" />
       <item itemvalue="Go Test.TestIterativeDeepening in github.com/christat/search/test/blind" />
+      <item itemvalue="Go Test.go test github.com/christat/search/test/informed" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.go test github.com/christat/search/test/informed" />
         <item itemvalue="Go Test.go test github.com/christat/search/test/blind" />
         <item itemvalue="Go Test.TestIterativeDeepening in github.com/christat/search/test/blind" />
         <item itemvalue="Go Test.TestIterativeDeepeningAStar in github.com/christat/search/test/informed" />
         <item itemvalue="Go Test.TestBenchmarkIterations in github.com/christat/search/test/blind" />
-        <item itemvalue="Go Test.TestBranchAndBound in github.com/christat/search/test/blind" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestBranchAndBound_in_github_com_christat_search_test_blind - 2018.08.14 at 20h 55m 49s.xml">
-      <configuration name="TestBranchAndBound in github.com/christat/search/test/blind" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestBranchAndBound_in_github_com_christat_search_test_blind - 2018.08.14 at 20h 56m 15s.xml">
-      <configuration name="TestBranchAndBound in github.com/christat/search/test/blind" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestBranchAndBound_in_github_com_christat_search_test_blind - 2018.08.14 at 20h 56m 17s.xml">
       <configuration name="TestBranchAndBound in github.com/christat/search/test/blind" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -397,46 +323,51 @@
     <history-entry file="go_test_github_com_christat_search_test_blind - 2018.08.14 at 21h 01m 34s.xml">
       <configuration name="go test github.com/christat/search/test/blind" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="go_test_github_com_christat_search_test_blind - 2018.08.14 at 21h 10m 40s.xml">
+      <configuration name="go test github.com/christat/search/test/blind" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_github_com_christat_search_test_informed - 2018.08.14 at 21h 10m 47s.xml">
+      <configuration name="go test github.com/christat/search/test/informed" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26817447" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.46758622" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32956383" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.20965517" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2641357" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.328594" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32827586" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.46758622" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.22206897" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.45655173" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.22206897" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32956383" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28917608" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3287483" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.22833562" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -536,7 +467,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../dot/parser/parser.go" />
     <entry file="file://$PROJECT_DIR$/../dot/test/graph_test.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -666,9 +596,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="e#16#100#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -676,9 +603,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <element signature="e#16#130#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -700,9 +624,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="111" selection-start-line="11" selection-start-column="111" selection-end-line="11" selection-end-column="111" />
-          <folding>
-            <element signature="e#16#72#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -741,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark_types.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blind/djikstra.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="93">
@@ -759,9 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="e#16#75#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -776,13 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/blind/breadth_first_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -821,7 +725,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/blind/dfs_branch_and_bound_test.go">
+    <entry file="file://$PROJECT_DIR$/test/informed/iterative_deepening_a_star_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-103">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blind/iterative_deepening.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/blind/iterative_deepening_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_dot_files/heuristic_graph_test.dot">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/blind/breadth_first_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/informed/a_star_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/informed/iterative_deepening_a_star.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blind/depth_first_branch_and_bound.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="52" column="1" lean-forward="true" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/blind/depth_first_branch_and_bound_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
@@ -831,58 +791,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/informed/iterative_deepening_a_star_test.go">
+    <entry file="file://$PROJECT_DIR$/benchmark_types.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-          <folding>
-            <element signature="e#23#144#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/informed/a_star_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="164">
+            <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blind/iterative_deepening.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_dot_files/heuristic_graph_test.dot">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/blind/iterative_deepening_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blind/dfs_branch_and_bound.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="81" column="23" lean-forward="true" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/informed/iterative_deepening_a_star.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="e#16#64#0" expanded="true" />
-          </folding>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
