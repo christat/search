@@ -1,8 +1,6 @@
 [![GoDoc](https://godoc.org/github.com/christat/search?status.svg)](https://godoc.org/github.com/christat/search)
 [![Build Status](https://travis-ci.org/christat/search.svg?branch=master)](https://travis-ci.org/christat/search)
-# SEARCH
-
-A minimal search algorithms library, aimed (mainly) at minimization-problem solving and educational purposes.
+# Search (Algorithms) - a minimal library
 
 The package is subdivided with two main sub-packages:
 
