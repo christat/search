@@ -1,0 +1,27 @@
+digraph beamTest {
+
+    // tree depth = 0
+    a [h = 0] -> {
+        b [h = 8]
+        c [h = 7]
+        d [h = 4]
+        e [h = 6]
+        f [h = 2]
+    };
+
+    // tree depth = 1
+    d -> {
+        g [h = 4]
+        h [h = 7]
+        i [h = 6]
+    };
+
+    f -> {
+        j [h = 8]
+        k [h = 10]
+    };
+
+    // tree depth = 2
+    i -> [w = 3] l;
+    i -> [w = 7] m;
+}

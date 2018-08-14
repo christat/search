@@ -12,7 +12,7 @@ func TestGreedyBestFirst(t *testing.T) {
 	graph.CostKey = "distance"
 	graph.HeuristicKey = "manhattan"
 	if !ok {
-		t.Errorf("Failed to parse AStar test file")
+		t.Errorf("Failed to parse GreedyBestFirst test file")
 	}
 	vertexMap := graph.VertexMap()
 	origin := vertexMap["Arad"]
@@ -33,7 +33,7 @@ func TestGreedyBestFirst(t *testing.T) {
 	if cost != 450 {
 		t.Errorf("Benchmark_GreedyBestFirst cost computation is incorrect")
 	}
-	if bench.TotalExpansions != 5 {
+	if bench.TotalExpansions != 4 {
 		t.Errorf("Benchmark_GreedyBestFirst expansions calculation is incorrect")
 	}
 
@@ -57,9 +57,9 @@ func TestGreedyBestFirst(t *testing.T) {
 	expectedSolution = "Dobreta -> Craiova -> RimnicuValcea -> Pitesti -> Bucharest -> Fagaras"
 	foundSolution = res.String()
 	if foundSolution != expectedSolution {
-		t.Errorf("Failed to find correct solution path in GreedyBestFirst.\nExpected: %v\nFound: %v", expectedSolution, foundSolution)
+		t.Errorf("Failed to find correct solution path with unadmissible Heuristic in GreedyBestFirst.\nExpected: %v\nFound: %v", expectedSolution, foundSolution)
 	}
 	if cost != 677 {
-		t.Errorf("Benchmark_GreedyBestFirst cost computation is incorrect")
+		t.Errorf("Benchmark_GreedyBestFirst with unadmissible Heuristic cost computation is incorrect")
 	}
 }

@@ -7,7 +7,7 @@ digraph Romania {
     Oradea -- [distance = 151] Sibiu;
     Zerind [manhattan = 374] -- [distance = 75] Arad;
     Arad [manhattan = 366] -- [distance = 140] Sibiu;
-    Arad -- [distance = 118] Timisoara;
+    Arad -- [distance = 118] Timisioara;
     Timisioara [manhattan = 329] -- [distance = 111] Lugoj;
     Lugoj [manhattan = 244] -- [distance = 70] Mehadia;
     Mehadia [manhattan = 75] -- [distance = 75] Dobreta;
