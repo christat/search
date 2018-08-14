@@ -77,7 +77,6 @@ func BenchmarkDFSBranchAndBound(origin, target search.WeightedState, bound float
 }
 
 func benchmarkCostBoundSearch(origin, from, to, target search.WeightedState, branchCost, bound float64, path map[search.State]search.State, expansions *uint) (found bool, cost float64) {
-	*expansions = *expansions + 1
 	expansionCost := from.Cost(to)
 	if branchCost + expansionCost < bound {
 		path[to] = from
@@ -88,6 +87,7 @@ func benchmarkCostBoundSearch(origin, from, to, target search.WeightedState, bra
 		} else {
 			oldCost := cost
 			for _, neighbor := range to.Neighbors() {
+				*expansions++
 				// because of Go's inflexible type system, neighbor must be coerced to allow access to cost/heuristic functions
 				solutionBranch, branchCost := benchmarkCostBoundSearch(origin, to, neighbor.(search.HeuristicState), target, oldCost, bound, path, expansions)
 				if solutionBranch && branchCost < bound {

@@ -28,7 +28,7 @@ digraph heuristicCostTest {
       // Heuristics are set as attribute "h" in the params.
       // Optimal A* path is: a -> b -> e -> f
 
-      a -> [w=1] b;
+      a [h=6] -> [w=1] b;
       a -> [w=2] d;
 
       b [h=7] -> [w=5] c;

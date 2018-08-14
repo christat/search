@@ -18,29 +18,32 @@ func TestIterativeDeepeningAStar(t *testing.T) {
 	origin := vertexMap["a"]
 	target := vertexMap["f"]
 
-	path, found := search.IterativeDeepeningAStar(origin, target)
+	path, found, cost := search.IterativeDeepeningAStar(origin, target)
 	if !found {
 		t.Errorf("IDA* failed to find valid path")
 	}
-	/*benchPath, found, bench := search.BenchmarkIterativeDeepening(origin, target, 10)
-	if !found {
-		t.Errorf("Benchmark_IDS failed to find valid path")
+	if cost != 9 {
+		t.Errorf("IDA* failed to compute costs correctly")
 	}
-	if bench.TotalExpansions != 7 {
-		t.Errorf("Benchmark_IDS expansions calculation is incorrect")
-	}*/
+	benchPath, found, cost, bench := search.BenchmarkIterativeDeepeningAStar(origin, target)
+	if !found {
+		t.Errorf("Benchmark_IDA* failed to find valid path")
+	}
+	if bench.TotalExpansions != 16 {
+		t.Errorf("Benchmark_IDA* expansions calculation is incorrect")
+	}
 
 	res, _ := tracer.TraceSolutionPath(origin, target, path)
-	//benchRes, _ := tracer.TraceSolutionPath(origin, target, benchPath)
+	benchRes, _ := tracer.TraceSolutionPath(origin, target, benchPath)
 
 	expectedSolution := "a -> b -> e -> f"
 	foundSolution := res.String()
-	//benchFoundSolution := benchRes.String()
+	benchFoundSolution := benchRes.String()
 	if foundSolution != expectedSolution {
 		t.Errorf("Failed to find correct solution path in IDA*.\nExpected: %v\nFound: %v", expectedSolution, foundSolution)
 	}
-	/*if benchFoundSolution != expectedSolution {
-		t.Errorf("Failed to find correct solution path in Benchmark_IDS.\nExpected: %v\nFound: %v", expectedSolution, benchFoundSolution)
-	}*/
+	if benchFoundSolution != expectedSolution {
+		t.Errorf("Failed to find correct solution path in Benchmark_IDA*.\nExpected: %v\nFound: %v", expectedSolution, benchFoundSolution)
+	}
 }
 

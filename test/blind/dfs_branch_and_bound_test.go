@@ -33,7 +33,7 @@ func TestBranchAndBound(t *testing.T) {
 	if cost != 11 {
 		t.Errorf("Benchmark_DFSBnB cost computation is incorrect")
 	}
-	if bench.TotalExpansions != 13 {
+	if bench.TotalExpansions != 10 {
 		t.Errorf("Benchmark_DFSBnB expansions calculation is incorrect")
 	}
 

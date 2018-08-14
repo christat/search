@@ -26,7 +26,7 @@ func TestIterativeDeepening(t *testing.T) {
 	if !found {
 		t.Errorf("Benchmark_IDS failed to find valid path")
 	}
-	if bench.TotalExpansions != 7 {
+	if bench.TotalExpansions != 4 {
 		t.Errorf("Benchmark_IDS expansions calculation is incorrect")
 	}
 
@@ -69,7 +69,7 @@ func TestBenchmarkIterations(t *testing.T) {
 	if !found {
 		t.Errorf("Failed to find valid path in Benchmark_IDS test file")
 	}
-	var expectedExpansions uint = 10
+	var expectedExpansions uint = 7
 	if bench.TotalExpansions != expectedExpansions {
 		t.Errorf("Failed to correctly count expansions in Benchmark_IDS test file.\nExpected: %v\nFound: %v", expectedExpansions, bench.TotalExpansions)
 	}
@@ -78,7 +78,7 @@ func TestBenchmarkIterations(t *testing.T) {
 	if !found {
 		t.Errorf("Failed to find valid path in Benchmark_IDS test file")
 	}
-	expectedExpansions = 19
+	expectedExpansions = 15
 	if bench.TotalExpansions != expectedExpansions {
 		t.Errorf("Failed to correctly count expansions in Benchmark_IDS test file.\nExpected: %v\nFound: %v", expectedExpansions, bench.TotalExpansions)
 	}
