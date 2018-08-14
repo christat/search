@@ -46,7 +46,7 @@ func BenchmarkIterativeDeepening(origin, target search.State, maxDepth int) (pat
 	var expansions uint = 0
 
 	for i := 0; i < maxDepth; i++ {
-		path, found, expansions = benchmarkDepthBoundSearch(origin, target, i, path, expansions)
+		found, expansions = benchmarkDepthBoundSearch(origin, target, i, path, expansions)
 		if found {
 			break
 		}
@@ -55,19 +55,19 @@ func BenchmarkIterativeDeepening(origin, target search.State, maxDepth int) (pat
 	return path, found, search.AlgorithmBenchmark{ElapsedTime: elapsed, TotalExpansions: expansions}
 }
 
-func benchmarkDepthBoundSearch(vertex, target search.State, bound int, path map[search.State]search.State, expansions uint) (map[search.State]search.State, bool, uint) {
+func benchmarkDepthBoundSearch(vertex, target search.State, bound int, path map[search.State]search.State, expansions uint) (bool, uint) {
 	expansions++
 	var found bool
 	if vertex.Equals(target) {
-		return path, true, expansions
+		return true, expansions
 	} else if bound > 0 {
 		for _, neighbor := range vertex.Neighbors() {
 			path[neighbor] = vertex
-			path, found, expansions = benchmarkDepthBoundSearch(neighbor, target, bound - 1, path, expansions)
+			found, expansions = benchmarkDepthBoundSearch(neighbor, target, bound - 1, path, expansions)
 			if found {
 				break
 			}
 		}
 	}
-	return path, found, expansions
+	return found, expansions
 }

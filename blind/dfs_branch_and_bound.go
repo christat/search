@@ -18,34 +18,32 @@ func DFSBranchAndBound(origin, target search.WeightedState, bound float64) (path
 	// hence the algorithm follows a left-to-right DFS "scanning" pattern.
 	for _, neighbor := range origin.Neighbors() {
 		// because of Go's inflexible type system, neighbor must be coerced to allow access to cost function
-		currentPath, solutionFound, currentCost := costBoundSearch(origin, origin, neighbor.(search.HeuristicState), target, cost, bound, path)
+		solutionFound, currentCost := costBoundSearch(origin, origin, neighbor.(search.HeuristicState), target, cost, bound, path)
 		if solutionFound && currentCost < bound {
 			found = true
 			bound = currentCost
-			solutionPath = currentPath
+			solutionPath = copyPath(path)
 		}
 	}
 	return solutionPath, found, bound
 }
 
-func costBoundSearch(origin, from, to, target search.WeightedState, branchCost, bound float64, path map[search.State]search.State) (solutionPath map[search.State]search.State, found bool, cost float64) {
+func costBoundSearch(origin, from, to, target search.WeightedState, branchCost, bound float64, path map[search.State]search.State) (found bool, cost float64) {
 	expansionCost := from.Cost(to)
 	if branchCost + expansionCost < bound {
 		path[to] = from
 		cost = branchCost + expansionCost
 		if to.Equals(target) {
-			solutionPath = copyPath(path)
 			bound = cost
 			found = true
 		} else {
 			oldCost := cost
 			for _, neighbor := range to.Neighbors() {
 				// because of Go's inflexible type system, neighbor must be coerced to allow access to cost/heuristic functions
-				branchPath, solutionBranch, branchCost := costBoundSearch(origin, to, neighbor.(search.HeuristicState), target, oldCost, bound, path)
+				solutionBranch, branchCost := costBoundSearch(origin, to, neighbor.(search.HeuristicState), target, oldCost, bound, path)
 				if solutionBranch && branchCost < bound {
 					found = true
 					bound = branchCost
-					solutionPath = branchPath
 					cost = bound
 				}
 			}
@@ -67,36 +65,34 @@ func BenchmarkDFSBranchAndBound(origin, target search.WeightedState, bound float
 	// hence the algorithm follows a left-to-right DFS "scanning" pattern.
 	for _, neighbor := range origin.Neighbors() {
 		// because of Go's inflexible type system, neighbor must be coerced to allow access to cost/heuristic functions
-		currentPath, solutionFound, currentCost := benchmarkCostBoundSearch(origin, origin, neighbor.(search.HeuristicState), target, cost, bound, path, &expansions)
+		solutionFound, currentCost := benchmarkCostBoundSearch(origin, origin, neighbor.(search.HeuristicState), target, cost, bound, path, &expansions)
 		if solutionFound && currentCost < bound {
 			found = true
 			bound = currentCost
-			solutionPath = currentPath
+			solutionPath = copyPath(path)
 		}
 	}
 	elapsed := time.Since(start)
 	return solutionPath, found, bound, search.AlgorithmBenchmark{ElapsedTime: elapsed, TotalExpansions: expansions}
 }
 
-func benchmarkCostBoundSearch(origin, from, to, target search.WeightedState, branchCost, bound float64, path map[search.State]search.State, expansions *uint) (solutionPath map[search.State]search.State, found bool, cost float64) {
+func benchmarkCostBoundSearch(origin, from, to, target search.WeightedState, branchCost, bound float64, path map[search.State]search.State, expansions *uint) (found bool, cost float64) {
 	*expansions = *expansions + 1
 	expansionCost := from.Cost(to)
 	if branchCost + expansionCost < bound {
 		path[to] = from
 		cost = branchCost + expansionCost
 		if to.Equals(target) {
-			solutionPath = copyPath(path)
 			bound = cost
 			found = true
 		} else {
 			oldCost := cost
 			for _, neighbor := range to.Neighbors() {
 				// because of Go's inflexible type system, neighbor must be coerced to allow access to cost/heuristic functions
-				branchPath, solutionBranch, branchCost := benchmarkCostBoundSearch(origin, to, neighbor.(search.HeuristicState), target, oldCost, bound, path, expansions)
+				solutionBranch, branchCost := benchmarkCostBoundSearch(origin, to, neighbor.(search.HeuristicState), target, oldCost, bound, path, expansions)
 				if solutionBranch && branchCost < bound {
 					found = true
 					bound = branchCost
-					solutionPath = branchPath
 					cost = bound
 				}
 			}

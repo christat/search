@@ -14,7 +14,7 @@ digraph heuristicCostTest {
       //
       //    Heuristics:
       //    ==================
-      //    h(a) = 0 (default)
+      //    h(a) = 6
       //    h(b) = 7
       //    h(c) = 2
       //    h(d) = 5
